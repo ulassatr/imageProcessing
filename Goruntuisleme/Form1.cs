@@ -20,7 +20,7 @@ namespace Goruntuisleme
         //Picturebox içinde resim olup olmadığını kontrol eder.Yoksa uyarı döndürür.
         private void errorCheck()
         {
-        if(pictureBox1.Image==null) 
+        if(pictureBox1.Image==null)
             {
                 MessageBox.Show("Lütfen önce fotoğraf seçiniz.", "Hata");
             }
@@ -173,8 +173,8 @@ namespace Goruntuisleme
         public Bitmap Scaling(Bitmap bmp)
         {
             Bitmap myBitmap = new Bitmap(pictureBox1.Image);
-           // int originalWidth = myBitmap.Width;//Gerçek genişlik
-            // int originalHeight = myBitmap.Height;//gerçek yükseklik
+            int originalWidth = myBitmap.Width;//Gerçek genişlik
+            int originalHeight = myBitmap.Height;//gerçek yükseklik
             string newWidth = textBox1.Text;//Alınan genişlik   
             string newHeight = textBox2.Text;//Alınan yükseklik
             Bitmap formed = new Bitmap(myBitmap, Convert.ToInt32(newWidth), Convert.ToInt32(newHeight));
@@ -303,7 +303,7 @@ namespace Goruntuisleme
           //Verileri grafiğe atama işlemi
             chart1.Series[0].Points.DataBindY(red);
             chart1.Series[1].Points.DataBindY(green);
-            chart1.Series[2].Points.DataBindY(blue);
+           chart1.Series[2].Points.DataBindY(blue);
             //chart1.Series[3].Points.DataBindY(gri);
             chart2.Series[0].Points.DataBindY(colorBrightness);
         }
